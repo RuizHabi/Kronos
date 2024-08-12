@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javier Kron | Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Javier Ruiz | Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="#" onclick="switchLanguage('en')">EN</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#" onclick="switchLanguage('ja')">日本語</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <button class="btn btn-outline-light ml-3" id="dropdownMenuButton"><i class="fa fa-bars"></i></button>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#" data-en="Home" data-ja="ホーム">Home</a>
+                      <a class="dropdown-item" href="#" data-en="Projects" data-ja="プロジェクト">Projects</a>
+                      <a class="dropdown-item" href="#" data-en="About Me" data-ja="私について">About Me</a>
+                      <a class="dropdown-item" href="#" data-en="Contact Info" data-ja="連絡">Contact Info</a>
+                  </div>
+              </li>
+          </ul>
+      </div>
+  </nav>
+
+  <!-- Image Banner -->
+  <div class="banner">
+    <img src="images/banner.jpg" alt="Portfolio Banner">
+    <div class="banner-text">
+        <h1 data-en="Welcome to My Portfolio" data-ja="私のポートフォリオへようこそ">Welcome to My Portfolio</h1>
+        <p data-en="Explore my projects and skills." data-ja="私のプロジェクトとスキルを見てください。">Explore my projects and skills.</p>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <h2 data-en="Welcome to My Portfolio" data-ja="私のポートフォリオへようこそ">Welcome to My Portfolio</h2>
+    <p data-en="Here you will find my latest projects and work." data-ja="ここでは、私の最新のプロジェクトと仕事を見ることができます。">Here you will find my latest projects and work.</p>
+  </div>
+
+<div class="container mt-5">
+    <h2 data-en="Latest Projects" data-ja="最新のプロジェクト">Latest Projects</h2>
+    <p data-en="Here you will find my latest projects and work." data-ja="ここでは、私の最新のプロジェクトと仕事を見ることができます。">Here you will find my latest projects and work.</p>
+</div>
+
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/scripts.js"></script>
+</body>
+</html>
