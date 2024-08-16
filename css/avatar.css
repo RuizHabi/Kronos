@@ -1,31 +1,22 @@
 .avatar-large {
-  position: absolute;
   object-fit: cover;
-  margin-right: 25%;
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
   border-radius: 50%;
-  z-index: 3;
-  left: 50%;
-  transform: translateX(-200%) translateY(-275%);
-  bottom: -50px;
+  margin:0 auto;
 
 }
 
 @media (max-width: 768px) {
   .avatar-large {
-      height: 100px;
-      width: 100px;
-      bottom: -40px;
-      transform: translateX(-125%) translateY(-420%);
+    height: 150px;
+    width: 150px;
   }
 }
 
 @media (max-width: 375px) {
   .avatar-large {
-      height: 90px;
-      width: 90px;
-      bottom: -40px;
-      transform: translateX(-125%) translateY(-310%);
+      height: 100px;
+      width: 100px;
   }
 }
