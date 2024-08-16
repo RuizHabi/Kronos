@@ -20,3 +20,12 @@
       transform: translateX(-125%) translateY(-420%);
   }
 }
+
+@media (max-width: 375px) {
+  .avatar-large {
+      height: 90px;
+      width: 90px;
+      bottom: -40px;
+      transform: translateX(-125%) translateY(-310%);
+  }
+}

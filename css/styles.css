@@ -4,7 +4,7 @@
 @import url('social-icons.css');
 @import url('container.css');
 @import url('chart.css');
-/* @import url('pop_up.css'); */
+@import url('pop_up.css');
 
 /* Global styles */
 body {

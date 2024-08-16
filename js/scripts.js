@@ -150,3 +150,35 @@ function renderChart() {
           .text(levelData.label);
   });
 }
+
+// Function to check if the device is mobile
+function isMobileDevice() {
+  return /Mobi|Android/i.test(navigator.userAgent);
+}
+
+// Function to adjust the chart size
+function adjustChartForMobile() {
+  const chartContainer = document.getElementById('chart');
+  const svg = chartContainer.querySelector('svg');
+
+  if (isMobileDevice()) {
+    // Adjust modal size
+    document.querySelector('.modal-dialog').style.maxWidth = '90%';
+    document.querySelector('.modal-dialog').style.margin = '15x auto';
+
+    // Adjust chart size
+    chartContainer.style.margin = '0';
+    chartContainer.style.width = '100%';
+
+    // Adjust SVG size
+    svg.style.width = 'auto';
+    svg.style.height = 'auto';
+
+    // Adjust modal body padding
+    document.querySelector('.modal-body').style.padding = '10px';
+  }
+}
+
+// Run the function on page load and resize
+window.addEventListener('load', adjustChartForMobile);
+window.addEventListener('resize', adjustChartForMobile);
