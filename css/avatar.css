@@ -1,0 +1,22 @@
+.avatar-large {
+  position: absolute;
+  object-fit: cover;
+  margin-right: 25%;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  z-index: 3;
+  left: 50%;
+  transform: translateX(-200%) translateY(-275%);
+  bottom: -50px;
+
+}
+
+@media (max-width: 768px) {
+  .avatar-large {
+      height: 100px;
+      width: 100px;
+      bottom: -40px;
+      transform: translateX(-125%) translateY(-420%);
+  }
+}

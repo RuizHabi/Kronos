@@ -1,0 +1,32 @@
+
+/* Mobile specific styles */
+@media (max-width: 768px) {
+  .modal-dialog {
+    max-width: 100%;
+    max-height: 100%; /* Limit modal width to fit mobile screen */
+    margin: 10px auto;
+  }
+
+  #chart {
+      margin: 10px; /* Further reduce margin for mobile */
+      width: 100%; /* Make the chart take full width of the modal */
+  }
+
+  svg {
+      width: 100%;
+      height: auto; /* Let the height adjust automatically */
+  }
+
+  .modal-body {
+      padding: 10px; /* Reduce padding in modal body */
+  }
+
+  .tooltip {
+      font-size: 10px; /* Smaller tooltip font size for mobile */
+  }
+
+  .modal-footer {
+      display: flex;
+      justify-content: center;
+  }
+}

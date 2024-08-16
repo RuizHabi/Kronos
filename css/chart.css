@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+.point {
+  stroke: black;
+  stroke-width: 1px;
+}
+
+.line {
+  fill: none;
+  stroke-width: 2;
+}
+
+.axis-label {
+  font-size: 12px;
+}
+
+.axis-path {
+  stroke: #000;
+}
+
+.axis-line {
+  stroke: #000;
+}
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.legend {
+  font-size: 12px;
+}
+
+.legend rect {
+  stroke-width: 2;
+  stroke: black;
+}
+
+footer a {
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
+}

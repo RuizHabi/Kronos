@@ -40,13 +40,15 @@
           </ul>
       </div>
   </nav>
-
+  <div class="avatar-large mt-5">
+    <img src="images/profile.JPG" class="avatar-large" alt="avatar-large" >
+  </div>
   <!-- Image Banner -->
   <div class="banner">
     <img src="images/banner.jpg" alt="Portfolio Banner">
     <div class="banner-text">
-        <h1 data-en="Welcome to My Portfolio" data-ja="私のポートフォリオへようこそ">Welcome to My Portfolio</h1>
-        <p data-en="Explore my projects and skills." data-ja="私のプロジェクトとスキルを見てください。">Explore my projects and skills.</p>
+      <h1 data-en="Welcome to Javier's Portfolio" data-ja="ハビエルのポートフォリオへようこそ">Welcome to Javier's Portfolio</h1>
+      <p data-en="Here you will find my latest projects and work." data-ja="ここでは、私の最新のプロジェクトと仕事を見ることができます。">Here you will find my latest projects and work.</p>
     </div>
   </div>
 
@@ -68,9 +70,49 @@
 
 
   <div class="container mt-5">
-    <h2 data-en="Welcome to My Portfolio" data-ja="私のポートフォリオへようこそ">Welcome to My Portfolio</h2>
-    <p data-en="Here you will find my latest projects and work." data-ja="ここでは、私の最新のプロジェクトと仕事を見ることができます。">Here you will find my latest projects and work.</p>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="images/casual.JPG" class="img-fluid portfolio-image" alt="Portfolio Image">
+        </div>
+        <div class="col-md-8">
+            <h2 data-en="About Me" data-ja="私について">About Me</h2>
+            <p data-en="My name is Javier but they call me Habi at work. I moved to Japan in 2019 and I started as an English teacher at an Elementary School and now I teach Preschool/nursery school. It has been my dream to start a new life in Japan and now that I have achieved it I am seeeking new opportunities. My current goal is to change careers, especially into IT. I have tried to teach myself and currently ended studying at a coding bootcamp in Tokyo. I like watching anime, movies, drawing, going to the gym, and studying Japanese. I hope you like this website and we can get along." data-ja="ハビエルと申しますが、職場では「ハビ」と呼ばれております。2019年に日本へ移住し、小学校で英語教師として勤務を開始いたしました。現在は、幼稚園および保育園にて教育活動に従事しております。日本で新たな生活を始めることは、私の長年の夢でございましたが、今、それが実現いたしました。
+
+            現在、新しい機会を模索しており、特にIT分野への転職を目指しております。独学でプログラミングを学び始め、現在では東京のコーディングブートキャンプを修了いたしました。
+
+            趣味はアニメや映画の鑑賞、絵を描くこと、ジムでのトレーニング、そして日本語の勉強でございます。よろしくお願いします">My name is Javier but they call me Habi at work. I moved to Japan in 2019 and I started as an English teacher at an Elementary School and now I teach Preschool/nursery school. It has been my dream to start a new life in Japan and now that I have achieved it I am seeeking new opportunities. My current goal is to change careers, especially into IT. I have tried to teach myself and currently ended studying at a coding bootcamp in Tokyo. I like watching anime, movies, drawing, going to the gym, and studying Japanese. I hope you like this website and we can get along. </p>
+        </div>
+    </div>
   </div>
+
+  <!-- button -->
+  <div class="container mt-5 text-center">
+    <div class="row">
+        <div class="col-md-12">
+            <a class="btn btn-gradient" href="#" data-en="Japanese Language Proficiency" data-ja="日本語能力" onclick="openPopup()">Japanese Language Proficiency</a>
+        </div>
+    </div>
+</div>
+
+<!-- Popup Modal -->
+<div class="modal fade" id="jlptModal" tabindex="-1" role="dialog" aria-labelledby="jlptModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="jlptModalLabel" data-en="Japanese Language Proficiency" data-ja="日本語能力">Japanese Language Proficiency</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="chart"></div> <!-- This is where the chart will be rendered -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" data-en="Close" data-ja="閉じる">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 
   <div class="container mt-5">
       <h2 data-en="Latest Projects" data-ja="最新のプロジェクト">Latest Projects</h2>
@@ -81,6 +123,8 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- D3.js -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
   <!-- Custom JS -->
   <script src="js/scripts.js"></script>
 </body>

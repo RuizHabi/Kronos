@@ -1,0 +1,37 @@
+.navbar-brand {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  margin-left: 10%;
+}
+
+.navbar-dark {
+  background-color: #020202;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.2em;
+}
+
+.navbar-nav .btn {
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+
+.dropdown-menu {
+  display: none;
+  background-color: #343a40;
+  border: none;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-item {
+  color: #fff;
+}
+
+.dropdown-item:hover {
+  background-color: #495057;
+  color: #fff;
+}
