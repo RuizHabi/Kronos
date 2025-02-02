@@ -49,7 +49,7 @@ function renderChart() {
           scores: [
               { date: new Date('2022-12-04'), totalScore: 85, details: { Vocabulary_Grammar_Reading: 25, Reading: 28, Listening: 32 }},
               { date: new Date('2023-12-03'), totalScore: 77, details: { Vocabulary_Grammar_Reading: 26, Reading: 22, Listening: 29 }},
-              { date: new Date('2024-12-01'), totalScore: 00, details: { Vocabulary_Grammar_Reading: 00, Reading: 00, Listening: 00 }}
+              { date: new Date('2024-12-01'), totalScore: 95, details: { Vocabulary_Grammar_Reading: 30, Reading: 33, Listening: 32 }}
           ]
       },
       {
