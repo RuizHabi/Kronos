@@ -82,7 +82,7 @@ function renderChart() {
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
   const x = d3.scaleTime()
-      .domain([new Date('2019-01-01'), new Date('2027-01-01')])
+      .domain([new Date('2019-01-01'), new Date('2029-01-01')])
       .range([0, width]);
 
   svg.append("g")
