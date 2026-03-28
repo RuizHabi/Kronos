@@ -57,7 +57,7 @@ function renderChart() {
           label: 'N2',
           passingScore: 90,
           scores: [
-              { date: new Date('2026-07-01'), totalScore: 0, details: { Vocabulary_Grammar_Reading: 25, Reading: 25, Listening: 20 }}
+              { date: new Date('2025-12-07'), totalScore: 49, details: { Vocabulary_Grammar: 13, Reading: 8, Listening: 28 }}
           ]
       },
       {
