@@ -63,7 +63,7 @@ function renderChart() {
           label: 'N2',
           passingScore: 90,
           scores: [
-              { date: new Date('2026-07-01'), totalScore: 0, details: { Vocabulary_Grammar_Reading: 25, Reading: 25, Listening: 20 }}
+              { date: new Date('2025-12-07'), totalScore: 49, details: { Vocabulary_Grammar_Reading: 13, Reading: 8, Listening: 28 }}
           ]
       },
       {
@@ -87,8 +87,14 @@ function renderChart() {
       .append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
+  // Get min and max dates from your data
+  const allDates = data.flatMap(level => level.scores.map(d => d.date));
+  
+  const minDate = d3.min(allDates);
+  const maxDate = new Date('2029-01-01'); // keep your desired end
+  
   const x = d3.scaleTime()
-      .domain([new Date('2019-01-01'), new Date('2027-01-01')])
+      .domain([minDate, maxDate])
       .range([0, width]);
 
   svg.append("g")
@@ -189,3 +195,11 @@ function adjustChartForMobile() {
 // Run the function on page load and resize
 window.addEventListener('load', adjustChartForMobile);
 window.addEventListener('resize', adjustChartForMobile);
+//compact x-axis
+svg.append("g")
+    .attr("transform", `translate(0,${height})`)
+    .call(
+        d3.axisBottom(x)
+            .ticks(d3.timeYear.every(2)) // show every 2 years
+            .tickFormat(d3.timeFormat("%Y"))
+    );
