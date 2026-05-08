@@ -1,6 +1,12 @@
 function switchLanguage(lang) {
   document.querySelectorAll('[data-en]').forEach(function(element) {
-      element.textContent = element.getAttribute(`data-${lang}`);
+    const text = element.getAttribute(`data-${lang}`) || "";
+
+    if (element.tagName === 'INPUT') {
+    element.placeholder = text; // Update placeholder for inputs
+        } else {
+    element.textContent = text; // Update text for everything else
+    }
   });
 }
 
