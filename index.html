@@ -87,6 +87,7 @@
 
   <!-- button -->
   <div class="container mt-5 text-center">
+    <p data-en="Click here to see my Japanese learning progress" data-ja="私の日本語学習の進捗状況を見るには、こちらをクリックしてください。"> Click here to see my Japanese learning progress</p>
     <div class="row">
         <div class="col-md-12">
             <a class="btn btn-gradient" href="#" data-en="Japanese Language Proficiency" data-ja="日本語能力" onclick="openPopup()">Japanese Language Proficiency</a>
@@ -115,57 +116,48 @@
   </div>
 
   <div class="container mt-5">
-        <form>
-            <input id="todo-input" type="text" placeholder="Can add or delete new tasks when logged in" data-en="Can add or delete new tasks when logged in" data-ja="ログインすると、新しいタスクを追加または削除できます。" autocomplete="off">
-            <button id="add-button" data-en="ADD" data-ja="追加">ADD</button>
-        </form>
-        <ul id="todo-list">
-            <li class="todo">
-            <input type="checkbox" id="todo-1">
-            <label class="custom-checkbox" for="todo-1">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"></path>
-                </svg>
-                </path>
-                </svg>
-            </label>
-            <label for="todo-1" class="todo-text">
-                web dev project w HTML, CSS, JS
-            </label>
-            <button class="edit-button">
-                <svg fill="var(--secondary-color)" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-        <path d="M200-200h57l434-434-57-57-434 434v57Zm-80 80v-170l527-527q12-12 28-18t32-6q16 0 32 6t28 18l57 57q12 12 18 28t6 32q0 16-6 32t-18 28L297-120H120Zm607-550-57-57 57 57Z"/>
-    </svg>
-            </button>
-            <button class="delete-button">
-                <svg fill="var(--secondary-color)" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                <path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z">
-                </path>
-                </svg>
-            </button>
-            </li>
-            <li class="todo">
-            <input type="checkbox" id="todo-2">
-            <label class="custom-checkbox" for="todo-2">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"></path>
-                </svg>
-                </path>
-                </svg>
-            </label>
-            <label for="todo-2" class="todo-text">
-                Pass N2 JLPT in December
-            </label>
-            <button class="edit-button">
-                <svg fill="var(--secondary-color)" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-        <path d="M200-200h57l434-434-57-57-434 434v57Zm-80 80v-170l527-527q12-12 28-18t32-6q16 0 32 6t28 18l57 57q12 12 18 28t6 32q0 16-6 32t-18 28L297-120H120Zm607-550-57-57 57 57Z"/>
-     </svg>
-            </button>
-            <button class="delete-button">
-                <svg fill="var(--secondary-color)" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                <path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z">
-                </path>
-                </svg>
-            </button>
-            </li>
+    <h1 data-en="Current Focus" data-ja="現在の焦点">Current Focus</h1>
+    <p data-en="When logged in, I can add or delete current tasks." data-ja="ログインすると、現在のタスクを追加または削除できます。">When logged in, I can add or delete current tasks.</p>
+    <form>
+        <input id="todo-input" type="text" placeholder="Can add or delete new tasks when logged in" data-en="Can add or delete new tasks when logged in" data-ja="ログインすると、新しいタスクを追加または削除できます。" autocomplete="off">
+        <button id="add-button" data-en="ADD" data-ja="追加">ADD</button>
+    </form>
+    <ul id="todo-list">
+        <li class="todo">
+        <input type="checkbox" id="todo-1">
+        <label class="custom-checkbox" for="todo-1">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"></path>
+            </svg>
+            </path>
+            </svg>
+        </label>
+        <label for="todo-1" class="todo-text">
+            web dev project w HTML, CSS, JS
+        </label>
+        <button class="delete-button">
+            <svg fill="var(--secondary-color)" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+            <path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z">
+            </path>
+            </svg>
+        </button>
+        </li>
+        <li class="todo">
+        <input type="checkbox" id="todo-2">
+        <label class="custom-checkbox" for="todo-2">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"></path>
+            </svg>
+            </path>
+            </svg>
+        </label>
+        <label for="todo-2" class="todo-text">
+            Pass N2 JLPT in December
+        </label>
+        <button class="delete-button">
+            <svg fill="var(--secondary-color)" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+            <path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"></path>
+            </svg>
+        </button>
+        </li>
         </ul>
         <p data-en="temporary message: work in progress." data-ja="一時的なメッセージ：作業中です。">temporary message: work in progress.</p>
         <p data-en="currently making this on codepen first before updating it here" data-ja="現在、まずCodePenで作成してから、ここに更新しています。">currently making this on codepen first before updating it here</p>
