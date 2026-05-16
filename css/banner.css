@@ -33,3 +33,15 @@
 .banner-text p {
   font-size: 1.2em;
 }
+
+@media(max-width: 500px){
+  .banner-text {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+}
