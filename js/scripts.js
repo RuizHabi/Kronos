@@ -196,6 +196,7 @@ function adjustChartForMobile() {
 window.addEventListener('load', adjustChartForMobile);
 window.addEventListener('resize', adjustChartForMobile);
 //compact x-axis
+
 svg.append("g")
     .attr("transform", `translate(0,${height})`)
     .call(
@@ -204,6 +205,4 @@ svg.append("g")
             .tickFormat(d3.timeFormat("%Y"))
     );
 ;
-
-//todo list 
 

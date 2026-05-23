@@ -71,6 +71,15 @@
   color: #f9f9f9; 
 }
 
+.custom-checkbox{
+  background-color: #4A4D57;
+}
+
+.custom-checkbox:hover svg{
+  fill: #00FFC4;
+  transition: 200ms ease;
+}
+
 .delete-button{
   padding: 3px;
   padding-left: 15px;
@@ -104,7 +113,7 @@ input[type="checkbox"]:checked ~ .custom-checkbox{
   background-color: #8c16fb;
 }
 input[type="checkbox"]:checked ~ .custom-checkbox svg{
-  fill: #1C1D20;
+  fill: #00FFC4;
 }
 input[type="checkbox"]:checked ~ .todo-text{
   text-decoration: line-through;
