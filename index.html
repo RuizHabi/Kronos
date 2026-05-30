@@ -15,31 +15,53 @@
 
 </head>
 <body>
+    <!--navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="#">Javier Ruiz | Portfolio</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="navbar-left">
+            <a class="navbar-brand" href="#">Javier Ruiz | Portfolio</a>
+
+            <div class="admin-login">
+                <input
+                    type="password"
+                    id="admin-password"
+                    placeholder="Admin Password"
+                >
+                
+                <button id="login-btn">🔒 Login</button>
+                <span id="login-status"></span>
+            </div>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                  <a class="nav-link" href="#" onclick="switchLanguage('en')">EN</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#" onclick="switchLanguage('ja')">日本語</a>
-              </li>
-              <li class="nav-item dropdown">
-                  <button class="btn btn-outline-light ml-3" id="dropdownMenuButton"><i class="fa fa-bars"></i></button>
-                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#" data-en="Home" data-ja="ホーム">Home</a>
-                      <a class="dropdown-item" href="#" data-en="Projects" data-ja="プロジェクト">Projects</a>
-                      <a class="dropdown-item" href="#" data-en="About Me" data-ja="私について">About Me</a>
-                      <a class="dropdown-item" href="#" data-en="Contact Info" data-ja="連絡">Contact Info</a>
-                  </div>
-              </li>
-          </ul>
-      </div>
-  </nav>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="switchLanguage('en')">EN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="switchLanguage('ja')">日本語</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="btn btn-outline-light ml-3" id="dropdownMenuButton">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <div class="dropdown-menu dropdown-menu-right"
+                        aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Home</a>
+                        <a class="dropdown-item" href="#">Projects</a>
+                        <a class="dropdown-item" href="#">About Me</a>
+                        <a class="dropdown-item" href="#">Contact Info</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
   <!-- Image Banner -->
   <div class="banner">
@@ -116,22 +138,28 @@
   </div>
 
   <!-- todo --> 
-  <div id="todo-container" class="container mt-5">
-      <section class="tasks">
-        <h1 data-en="Current Focus" data-ja="現在の焦点">Current Focus</h1>
-        <p data-en="When logged in, I can add or delete current tasks." data-ja="ログインすると、現在のタスクを追加または削除できます。">When logged in, I can add or delete current tasks.</p>
-        <form id="todo-form">
-            <input id="todo-input" type="text" placeholder="Can add or delete new tasks when logged in" data-en="Can add or delete new tasks when logged in" data-ja="ログインすると、新しいタスクを追加または削除できます。" autocomplete="off">
-            <button type="submit" id="add-button" data-en="ADD" data-ja="追加">ADD</button>
-        </form>
-        <ul id="todo-list"></ul>
-            <!--this section is in JavaScript-->
+    <div id="todo-container" class="container mt-5">
+        <section class="tasks">
+            <h1 data-en="Current Focus" data-ja="現在の焦点">Current Focus</h1>
+            <p data-en="When logged in, I can add or delete current tasks." data-ja="ログインすると、現在のタスクを追加または削除できます。">When logged in, I can add or delete current tasks.</p>
+            <form id="todo-form">
+                <input id="todo-input" type="text" placeholder="Can add or delete new tasks when logged in" data-en="Can add or delete new tasks when logged in" data-ja="ログインすると、新しいタスクを追加または削除できます。" autocomplete="off">
+                <button type="submit" id="add-button" data-en="ADD" data-ja="追加">ADD</button>
+            </form>
+            <p id="todo-warning"></p>
+            <ul id="todo-list"></ul>
+                <!--this section is in JavaScript-->
         </section>  
     </div>
 
   <div class="container mt-5">
-      <h2 data-en="Latest Projects" data-ja="最新のプロジェクト">Latest Projects</h2>
-      <p data-en="Here you will find my latest projects and work." data-ja="ここでは、私の最新のプロジェクトと仕事を見ることができます。">Here you will find my latest projects and work.</p>
+      <h2 data-en="Updated News blog" data-ja="最新ニュース">Updated News blog</h2>
+      <p data-en="Here you will find my latest updates. Coming soon" data-ja="ここでは、私の最新のプロジェクトと仕事を見ることができます。">Here you will find my latest updates. Coming soon</p>
+  </div>
+
+  <div class="container mt-5">
+      <!--<h2 data-en="end" data-ja="最新ニュース">Updated News blog</h2>
+      <p dat>a-en="Here you will find my latest updates. Coming soon" data-ja="ここでは、私の最新のプロジェクトと仕事を見ることができます。">Here you will find my latest updates. Coming soon</p>-->
   </div>
 
   <!-- Bootstrap JS and dependencies -->

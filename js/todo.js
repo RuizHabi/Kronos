@@ -1,11 +1,78 @@
+// admin login //
+const ADMIN_PASSWORD = "1234";
+let isLoggedIn = false;
+
+const loginButton = document.getElementById("login-btn");
+const passwordInput = document.getElementById("admin-password");
+const loginStatus = document.getElementById("login-status");
+
+passwordInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    loginButton.click();
+  }
+});
+loginButton.addEventListener("click", () => {
+  if (passwordInput.value === ADMIN_PASSWORD) {
+    isLoggedIn = true;
+
+    sessionStorage.setItem("adminLoggedIn", "true");
+
+    loginStatus.textContent = "Logged In";
+    passwordInput.classList.add("logged-in");
+    loginButton.classList.add("logged-in");
+
+    updatePermissions();
+  } else {
+    alert("Incorrect password");
+  }
+});
+
+if (sessionStorage.getItem("adminLoggedIn") === "true") {
+  isLoggedIn = true;
+  loginStatus.textContent = "Logged In";
+}
+
+function updatePermissions() {
+  
+  document.getElementById("todo-input").disabled = !isLoggedIn;
+  document.getElementById("add-button").disabled = !isLoggedIn;
+
+  document.querySelectorAll(".delete-button").forEach(button => {
+    button.style.display = isLoggedIn ? "block" : "none";
+  });
+  document.querySelectorAll('#todo-list input[type="checkbox"]').forEach(checkbox => {
+    checkbox.disabled = !isLoggedIn;
+  });
+}
+
+
+
+
 //todo list 
+const todoSection = document.querySelector(".tasks");
+const warning = document.getElementById("todo-warning");
+console.log(todoSection);
+console.log(warning);
+
+todoSection.addEventListener("click", () => {
+    if (!isLoggedIn) {
+
+        warning.textContent =
+            "🔒 Please log in before editing tasks.";
+
+        setTimeout(() => {
+            warning.textContent = "";
+        }, 3000);
+    }
+});
 
 const todoForm = document.getElementById('todo-form');
 const todoInput = document.getElementById('todo-input');
 const todoListUL = document.getElementById('todo-list');
-console.log(todoForm);
-console.log(todoInput);
-console.log(todoListUL);
+
+
+updatePermissions();
 
 let allTodos = getTodos();
 updateTodoList();
@@ -58,10 +125,12 @@ function createTodoItem(todo, todoIndex){
       </button>
   `;
   const deleteButton = todoLI.querySelector(".delete-button");
+  deleteButton.style.display = isLoggedIn ? "block" : "none";
   deleteButton.addEventListener("click", ()=>{
     deleteTodoItem(todoIndex);
   })
   const checkbox = todoLI.querySelector("input");
+  checkbox.disabled = !isLoggedIn;
   checkbox.addEventListener("change", ()=>{
     allTodos[todoIndex].completed = checkbox.checked;
     saveTodos();
@@ -84,3 +153,4 @@ function getTodos(){
   const todos = localStorage.getItem("todos") || "[]";
   return JSON.parse(todos);
 }
+

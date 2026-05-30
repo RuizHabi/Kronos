@@ -138,3 +138,10 @@ input[type="checkbox"]{
     font-size: 15vw;
   }
 }
+
+#todo-warning {
+  color: #ff4d4d;
+  font-weight: bold;
+  margin-top: 10px;
+  min-height: 20px;
+}
